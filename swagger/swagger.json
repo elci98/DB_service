@@ -1,0 +1,348 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Shavtzak DB Swagger",
+    "version": "1.0.0"
+  },
+  "schemes": ["http", "https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/tasks": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": "application/json",
+            "schema": {
+              "$ref": "#/definitions/task"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/task"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/task"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      },
+      "delete": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      }
+    },
+    "/soldiers": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": "application/json",
+            "schema": {
+              "$ref": "#/definitions/soldier"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/soldier"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/soldier"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      },
+      "delete": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      }
+    },
+    "/lists": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": "application/json",
+            "schema": {
+              "$ref": "#/definitions/list"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/list"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/list"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      },
+      "delete": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK"
+          },
+          "404":{
+            "description":"NOT FOUND"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "task": {
+      "type": "object",
+      "nullable": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    "list": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "type": "array",
+          "nullable": false,
+          "items": {
+            "type":"string"
+          }
+        },
+        "rows":{
+          "type":"object",
+          "properties":{
+            "key":{
+              "type":"string",
+              "nullable":false
+            },
+            "value":{
+              "$ref":"#/definitions/soldier",
+              "nullable":false
+            }
+          }
+        }
+      }
+    },
+    "soldier": {
+      "type": "object",
+      "nullable": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "task": {
+          "required": false,
+          "$ref": "#/definitions/task"
+        }
+      }
+    }
+  }
+}

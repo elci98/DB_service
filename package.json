@@ -1,0 +1,26 @@
+{
+  "name": "shavtzak_db",
+  "version": "1.0.0",
+  "description": "db service for shavtzak system",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/index.js"
+  },
+  "author": "Elchanan Mahatsri",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-joi-validation": "^5.0.1",
+    "joi": "^17.13.1",
+    "mongodb": "^6.6.2",
+    "mongodb-generic-dal": "^0.0.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "tsc": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}
