@@ -1,4 +1,4 @@
-import { Router } from 'express'
+import { Router } from 'express';
 import { SoldiersRouter } from './soldiers.routes';
 import { tasksRouter } from './tasks.routes';
 import { listsRouter } from './lists.routes';
