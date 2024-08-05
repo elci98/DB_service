@@ -33,9 +33,9 @@ export default [
 
 		rules: {
 			indent: ['error', 'tab'],
-			'linebreak-style': ['error', 'windows'],
 			quotes: ['error', 'single'],
 			semi: ['error', 'always'],
+			'@typescript-eslint/no-explicit-any': 'off'
 		},
 	},
 ];
